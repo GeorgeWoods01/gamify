@@ -9,21 +9,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>Anna</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Dimitri</td>
-                <td>99</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Simone</td>
-                <td>98</td>
-            </tr>
+
+             <%  @sorted_students.each_with_index do |student, index| %>
+              <tr>
+                <td><%= index +1 %></td>
+                <td><%= student.first_name %></td>
+                <td><%= student.coins %></td>
+              </tr>
+                <% end %>
         </tbody>
         <tfoot>
             <tr>
