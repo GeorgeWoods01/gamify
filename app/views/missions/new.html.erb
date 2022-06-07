@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>New Mission</h1>
+
+  <%= simple_form_for [@classroom, @mission] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :coins %>
+    <%= f.input :time_length %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

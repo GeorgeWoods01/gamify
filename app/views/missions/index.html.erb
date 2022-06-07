@@ -1,1 +1,22 @@
 <h1>All the missions</h1>
+
+<div class="btn">
+  <%= link_to "Create a mission", new_classroom_mission_path(@classroom) %>
+</div>
+<ul>
+  <% @missions.each do |mission| %>
+  <div>
+    <ul>
+      <li><%= mission.name %> <%= link_to "Edit", edit_mission_path(mission)  %> <%= link_to "Delete", mission_path(mission), method: :delete  %></li>
+      <ul>
+        <li><%= mission.description %></li>
+        <li><%= mission.status %></li>
+        <li><%= mission.coins %></li>
+        <li><%= mission.time_length %></li>
+      </ul>
+    </ul>
+
+  </div>
+  <% end %>
+
+</ul>
