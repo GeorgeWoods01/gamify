@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_07_102419) do
+ActiveRecord::Schema.define(version: 2022_06_07_125435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_102419) do
   create_table "missions", force: :cascade do |t|
     t.string "name"
     t.integer "coins"
-    t.boolean "status"
+    t.boolean "status", default: false
     t.text "description"
     t.time "time_length"
     t.datetime "created_at", precision: 6, null: false
