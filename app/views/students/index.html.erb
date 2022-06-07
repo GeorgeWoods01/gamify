@@ -1,1 +1,14 @@
 <h1>All the students</h1>
+
+<div class="container py-5">
+  <div class='cards'>
+    <% @students.each do |s| %>
+    <div class="card-product">
+       <%= image_tag ("devil-mad-icon.png") %>
+      <div class="card-product-infos">
+        <h2><%= s.first_name %></h2>
+    <% end %>
+      </div>
+    </div>
+  </div>
+</div>
