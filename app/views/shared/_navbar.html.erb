@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <div>
-    <%= link_to "#", class: "navbar-brand" do %>
+    <div class="logo-div">
+    <%= link_to'#',class: "navbar-brand" do %>
       <%= image_tag "logo.png" %>
     <% end %>
       <%= image_tag "gamify.png", class:"gamify-logo" %>
@@ -12,15 +12,27 @@
     </div>
      <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+        <div class="nav-icons">
+        <div class="icon">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_ei7frqcx.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay  ></lottie-player>
+        </div>
             <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Classroom", classroom_students_path(@classroom), class: "nav-link" %>
-          </li>
-          <li class="nav-item">
+        </div>
+        <div class="nav-icons">
+         <div class="icon" id="class-icon">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_IHXuk5.json"  background="transparent" speed="1"  style="width: 30px; height: 30px" loop  autoplay ></lottie-player>
+          </div>
+              <%= link_to "Classroom", classroom_students_path(@classroom), class: "nav-link" %>
+        </div>
+        <div class="nav-icons">
+        <div class="icon">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_evrce8mt.json"  background="transparent"  speed="1"  style="width: 45px; height: 45px;" loop autoplay  ></lottie-player>
+        </div>
             <%= link_to "Missions", classroom_missions_path(@classroom), class: "nav-link" %>
-          </li>
+        </div>
           <li class="nav-item dropdown">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

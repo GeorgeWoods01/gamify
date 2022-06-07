@@ -1,0 +1,23 @@
+.nav-icons{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-link{
+  opacity: 0;
+  transition: ease all 1s;
+}
+.icon{
+  transform: translate(0px, 50px);
+  transition: ease all 0.5s;
+}
+.nav-icons:hover .icon{
+  transform: translate(0px, 0px);
+}
+.nav-icons:hover .nav-link{
+  opacity: 1;
+}
+#class-icon{
+  margin: 8px;
+}
