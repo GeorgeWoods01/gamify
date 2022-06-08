@@ -1,5 +1,6 @@
 class Student < ApplicationRecord
   belongs_to :classroom
+  has_one_attached :photo
 
   has_many :missions, through: :mission_setups
 
