@@ -1,22 +1,28 @@
+<div class=<div class="container py-5">
 <h1>All the missions</h1>
 
 <div class="btn">
   <%= link_to "Create a mission", new_classroom_mission_path(@classroom) %>
 </div>
-<ul>
-  <% @missions.each do |mission| %>
-  <div>
-    <ul>
-      <li><%= mission.name %> <%= link_to "Edit", edit_mission_path(mission)  %> <%= link_to "Delete", mission_path(mission), method: :delete  %></li>
-      <ul>
-        <li><%= mission.description %></li>
-        <li><%= mission.status %></li>
-        <li><%= mission.coins %></li>
-        <li><%= mission.time_length %></li>
+<div class="grid-container">
+  <ul style="list-style: none;">
+      <div class='missions-cards'>
+    <% @missions.each do |mission| %>
+    <div class='mission-card'>
+      <ul  style="list-style: none;">
+        <li><strong><%= mission.name%></strong> <%= link_to "Edit", edit_mission_path(mission)    %> <%= link_to "Delete", mission_path(mission), method: :delete  %></li>
+        <ul style="list-style: none;">
+          <li><%= mission.description %></li>
+          <li><%= mission.status %></li>
+          <li><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_CbT8Hi.json" background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player><%= mission.coins %></li>
+          <li><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets1.lottiefiles.com/packages/lf20_glm1lgnc.json"  background="transparent"  speed="1"  style="width: 30px; height: 30px;"  loop  autoplay></lottie-player><%= mission.time_length %></li>
+        </ul>
       </ul>
-    </ul>
-
+    </div>
+    <% end %>
+  </ul>
   </div>
-  <% end %>
-
-</ul>
+</div>
+</div>
