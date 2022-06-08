@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :students, only: %i[new create index]
     resources :missions, only: %i[new create index]
   end
+  resources :students, only: [ :show ]
 end
