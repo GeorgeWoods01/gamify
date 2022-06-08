@@ -1,6 +1,7 @@
 .student-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
+  text-size-adjust: 100%;
 }
 
 .student-cards {
@@ -9,4 +10,8 @@
   grid-gap: 16px;
   width: 100%;
   flex-grow: 1;
+}
+
+.link {
+  text-decoration: none;
 }
