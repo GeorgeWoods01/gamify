@@ -7,9 +7,11 @@
 .nav-link{
   opacity: 0;
   transition: ease all 1s;
+  margin-bottom: -20px;
+  transform: translate(0px, -10px);
 }
 .icon{
-  transform: translate(0px, 50px);
+  transform: translate(0px, 17px);
   transition: ease all 0.5s;
 }
 .nav-icons:hover .icon{
@@ -20,4 +22,15 @@
 }
 #class-icon{
   margin: 8px;
+}
+
+.navbar-nav{
+  margin-top: -15px;
+  align-items: center;
+}
+.logo-div{
+  margin-left: -138px;
+}
+#nav-teacher{
+  position: relative;
 }
