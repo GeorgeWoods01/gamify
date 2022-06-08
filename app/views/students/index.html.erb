@@ -1,14 +1,18 @@
 <h1>All the students</h1>
 
-<div class="container py-5">
-  <div class='cards'>
+<div class="grid-container">
+  <ul style="list-style: none;">
+    <div class='student-cards'>
     <% @students.each do |s| %>
-    <div class="card-product">
-       <%= image_tag ("devil-mad-icon.png") %>
-      <div class="card-product-infos">
-        <h2><%= s.first_name %></h2>
-    <% end %>
+      <div class='student-card'>
+      <%= image_tag ("devil-mad-icon.png") %>
+        <ul  style="list-style: none;">
+          <li><strong><%= s.first_name%></strong>
+           <%= link_to "More info", edit_missiopath(mission)    %>
+          <ul style="list-style: none;">
+        </ul>
       </div>
+    <% end %>
     </div>
-  </div>
+  </ul>
 </div>
