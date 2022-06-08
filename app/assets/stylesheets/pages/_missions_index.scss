@@ -1,0 +1,54 @@
+.missions-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.card-bottom-right{
+  padding: 20px;
+}
+.mission-photo {
+object-position: bottom;
+height: 50px;
+width: 100px;
+}
+
+.missions-cards{
+  padding: 20px;
+}
+
+.mission-card{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position:relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+.card-mission-bottom{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.card-mission-bottom-left{
+  text-align: left;
+  margin-top: 0px
+}
+
+.card-mission-bottom-right{
+  text-align: right;
+  font-weight: bold;
+  justify-content: space-between;
+}
+a{
+  text-decoration: none;
+}
+
+.btn {
+  color: red;
+  border-radius: 10px;
+}

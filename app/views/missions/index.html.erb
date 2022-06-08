@@ -1,22 +1,23 @@
+<div class="container py-10">
 <h1>All the missions</h1>
 
-<div class="btn">
-  <%= link_to "Create a mission", new_classroom_mission_path(@classroom) %>
-</div>
-<ul>
+<a href="new_classroom_mission_path(@classroom)" class="btn btn-info btn-sm active" role="button" aria-pressed="true">Create a mission</a>
+
+
+<div class="missions-cards">
   <% @missions.each do |mission| %>
-  <div>
-    <ul>
-      <li><%= mission.name %> <%= link_to "Edit", edit_mission_path(mission)  %> <%= link_to "Delete", mission_path(mission), method: :delete  %></li>
-      <ul>
-        <li><%= mission.description %></li>
-        <li><%= mission.status %></li>
-        <li><%= mission.coins %></li>
-        <li><%= mission.time_length %></li>
-      </ul>
-    </ul>
-
-  </div>
+    <div class='mission-card'>
+      <%= image_tag "rocket.png", class: "mission-photo" %>
+      <strong> <%= mission.name %> </strong>
+        <div class="card-mission-bottom">
+          <div class="card-mission-bottom-left">
+           <p> <%= mission.coins %> <i class="fa fa-coins"></i> </p>
+          </div>
+            <div class="card-bottom-right">
+               <a href="url"><i class="fas fa-play"></i></a>
+               <a href="url"><i class="fas fa-info"></i></a>
+            </div>
+        </div>
+     </div>
   <% end %>
-
-</ul>
+</div>
