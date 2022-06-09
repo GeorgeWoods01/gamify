@@ -13,9 +13,10 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar', class: @classroom %>
-    <%= render 'shared/flashes' %>
-
-    <%= yield %>
-  </body>
+      <%= render 'shared/navbar', class: @classroom %>
+      <div class="container-page">
+      <%= render 'shared/flashes' %>
+      <%= yield %>
+    </body>
+  </div>
 </html>
