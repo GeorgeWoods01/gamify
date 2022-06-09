@@ -6,19 +6,23 @@
 
 <div class="missions-cards">
   <% @missions.each do |mission| %>
-    <div class='mission-card'>
+    <div class='mission-card'  data-controller="insert-in-list">
       <%= image_tag "rocket.png", class: "mission-photo" %>
       <strong> <%= mission.name %> </strong>
-        <div class="card-mission-bottom">
+        <div class="card-mission-bottom" data-insert-in-list-target="cardBottom" >
           <div class="card-mission-bottom-left">
-           <p> <%= mission.coins %> <i class="fa fa-coins"></i> </p>
+           <p> <%= mission.coins %><i class="fa fa-coins"></i> </p>
           </div>
             <div class="card-bottom-right">
-                <%= simple_form_for([mission, @mission_setup], remote: true) do |f|%>
-                  <%= f.submit %>
+              <div data-insert-in-list-target="items">
+              </div>
+                <%= simple_form_for([mission, @mission_setup], remote: true, data: { insert_in_list_target: "form"} ) do |f|%>
+                  <%= f.submit style: 'display: none', id: 'start'%>
+
+                  <i data-action="click->insert-in-list#send" class="fas fa-play"></i>
+                   <i data-action="click->insert-in-list#info" class="fas fa-info"></i>
                 <% end%>
-               <a href="url"><i class="fas fa-play"></i></a>
-               <a href="url"><i class="fas fa-info"></i></a>
+                <p class="d-none" data-insert-in-list-target="description"><%= mission.description %> </p>
             </div>
         </div>
      </div>
