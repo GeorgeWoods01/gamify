@@ -1,30 +1,14 @@
-<table id="ranking" class="table table" style="width:50%">
-        <thead>
-            <tr>
-                <th> <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_cv6rdeii.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player></th>
-                <th>Name</th>
-                <th><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_CbT8Hi.json" background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player></th>
-            </tr>
-        </thead>
-        <tbody>
-
-             <%  @sorted_students.each_with_index do |student, index| %>
-              <tr>
-                <td><%= index +1 %></td>
-                <td><%= student.first_name %></td>
-                <td><%= student.coins %></td>
-              </tr>
-                <% end %>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th> <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets6.lottiefiles.com/packages/lf20_cv6rdeii.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player></th>
-                <th>Name</th>
-                <th><script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-                <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_CbT8Hi.json" background="transparent"  speed="1"  style="width: 50px; height: 50px;" loop autoplay></lottie-player></th>
-            </tr>
-        </tfoot>
-    </table>
+<div >
+  <% students = Classroom.last.students  %>
+  <% students_sorted = students.sort_by { |s| -s.coins}   %>
+  <%  students_sorted.each_with_index do |student, index| %>
+    <div class = "row-leaderboard mt-4">
+      <%= image_tag ("https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Bat-icon.png"), class: "ava-row" %>
+      <p class = "name-text"><%=" #{index + 1}-#{student.first_name}"  %></p>
+      <div>
+        <p class="coin-text"><%= student.coins %></p>
+        <%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %>
+      </div>
+    </div>
+  <% end %>
+</div>
