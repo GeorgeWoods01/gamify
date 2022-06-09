@@ -1,0 +1,16 @@
+.bkg-leaderboard {
+  background-image: url(background_ball/1.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.title{
+  font-family: 'Fredoka One', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  -webkit-text-stroke: 3px #1A558A;
+}

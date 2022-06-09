@@ -1,0 +1,28 @@
+.row-leaderboard{
+  height: 125px;
+  width: 700px;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #E1F2FF;
+  border-radius: 67px;
+}
+.ava-row {
+  height: 85%;
+}
+.name-text{
+  font-family: 'Fredoka One', cursive;
+  font-size: 3em;
+  color: #1C419A;
+}
+.coin-text{
+  font-family: 'Fredoka One', cursive;
+  font-size: 2em;
+  margin: 0px;
+  color: #1C419A;
+}
+.coins-row {
+  height: 36px;
+  width: 60px;
+}
