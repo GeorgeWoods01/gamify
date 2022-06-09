@@ -1,8 +1,8 @@
 <div class="container py-10">
 <h1>All the missions</h1>
 
-<a href="new_classroom_mission_path(@classroom)" class="btn btn-info btn-sm active" role="button" aria-pressed="true">Create a mission</a>
-
+<%# <a href="new_classroom_mission_path(@classroom)" class="btn btn-info btn-sm active" role="button" aria-pressed="true">Create a mission</a> %>
+<%= link_to "Create a mission", new_classroom_mission_path(@classroom), class: "btn btn-info btn-sm active" %>
 
 <div class="missions-cards">
   <% @missions.each do |mission| %>
