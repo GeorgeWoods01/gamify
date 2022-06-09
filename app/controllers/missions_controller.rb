@@ -1,6 +1,7 @@
 class MissionsController < ApplicationController
   def index
     @missions = @classroom.missions
+    @mission_setup = MissionSetup.new
   end
 
   def new
