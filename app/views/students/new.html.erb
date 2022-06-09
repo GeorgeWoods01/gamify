@@ -4,6 +4,7 @@
     <%= f.input :first_name , placeholder: "What is their first name?" %>
     <%= f.input :last_name, placeholder: "What is their last name?" %>
     <%= f.input :date_of_birth, placeholder: "when were they born?" %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Create", class: "btn btn-danger" %>
   <% end %>
 </div>
