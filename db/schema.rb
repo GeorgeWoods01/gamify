@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_08_151211) do
+ActiveRecord::Schema.define(version: 2022_06_09_132552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,10 +65,10 @@ ActiveRecord::Schema.define(version: 2022_06_08_151211) do
     t.integer "coins"
     t.boolean "status", default: false
     t.text "description"
-    t.time "time_length"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "classroom_id", null: false
+    t.string "length"
     t.index ["classroom_id"], name: "index_missions_on_classroom_id"
   end
 
