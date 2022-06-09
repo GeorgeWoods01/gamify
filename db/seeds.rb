@@ -28,44 +28,52 @@ puts "creating Fred's students"
 
 student_one = Student.new(first_name: "James", last_name: "Smith", date_of_birth: Date.parse("09/05/2015"), coins: 25, classroom: Classroom.last)
 file_one = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Bat-icon.png')
-student_one.photo.attach(io: file_one, filename: 'nes.png', content_type: 'image/png')
+student_one.photo.attach(io: file_one, filename: "#{student_one}.png", content_type: 'image/png')
 student_one.save
-student_two = Student.create!(first_name: "Anna", last_name: "Smith", date_of_birth: Date.parse("10/06/2015"), coins: 15, classroom: Classroom.last)
+student_two = Student.new(first_name: "Anna", last_name: "Smith", date_of_birth: Date.parse("10/06/2015"), coins: 15, classroom: Classroom.last)
 file_two = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/128/Capt-Spaulding-icon.png')
-student_two.photo.attach(io: file_two, filename: 'nes.png', content_type: 'image/png')
+student_two.photo.attach(io: file_two, filename: "#{student_two}.png", content_type: 'image/png')
 student_two.save
-student_three = Student.create!(first_name: "Beatriz", last_name: "Smith", date_of_birth: Date.parse("11/07/2015"), coins: 100, classroom: Classroom.last)
+student_three = Student.new(first_name: "Beatriz", last_name: "Smith", date_of_birth: Date.parse("11/07/2015"), coins: 100, classroom: Classroom.last)
 file_three = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/128/Diablo-icon.png')
-student_three.photo.attach(io: file_three, filename: 'nes.png', content_type: 'image/png')
+student_three.photo.attach(io: file_three, filename: "#{student_three}.png", content_type: 'image/png')
 student_three.save
-student_four = Student.create!(first_name: "Eugenia", last_name: "Smith", date_of_birth: Date.parse("12/08/2015"), coins: 70, classroom: Classroom.last)
+student_four = Student.new(first_name: "Eugenia", last_name: "Smith", date_of_birth: Date.parse("12/08/2015"), coins: 70, classroom: Classroom.last)
 file_four = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Extraterrestrial-icon.png')
-student_four.photo.attach(io: file_four, filename: 'nes.png', content_type: 'image/png')
+student_four.photo.attach(io: file_four, filename: "#{student_four}.png", content_type: 'image/png')
 student_four.save
-student_five = Student.create!(first_name: "Pablo", last_name: "Smith", date_of_birth: Date.parse("13/09/2015"), coins: 45, classroom: Classroom.last)
+student_five = Student.new(first_name: "Pablo", last_name: "Smith", date_of_birth: Date.parse("13/09/2015"), coins: 45, classroom: Classroom.last)
 file_five = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/128/Frankenstein-icon.png')
-student_five.photo.attach(io: file_five, filename: 'nes.png', content_type: 'image/png')
+student_five.photo.attach(io: file_five, filename: "#{student_five}.png", content_type: 'image/png')
 student_five.save
-student_six = Student.create!(first_name: "David", last_name: "Smith", date_of_birth: Date.parse("14/10/2015"), coins: 30, classroom: Classroom.last)
+student_six = Student.new(first_name: "David", last_name: "Smith", date_of_birth: Date.parse("14/10/2015"), coins: 30, classroom: Classroom.last)
 file_six = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/128/Goomba-icon.png')
-student_six.photo.attach(io: file_six, filename: 'nes.png', content_type: 'image/png')
+student_six.photo.attach(io: file_six, filename: "#{student_six}.png", content_type: 'image/png')
 student_six.save
-student_seven = Student.create!(first_name: "Paulo", last_name: "Smith", date_of_birth: Date.parse("15/11/2015"), coins: 10, classroom: Classroom.last)
+student_seven = Student.new(first_name: "Paulo", last_name: "Smith", date_of_birth: Date.parse("15/11/2015"), coins: 10, classroom: Classroom.last)
 file_seven = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Hellboy-icon.png')
-student_seven.photo.attach(io: file_seven, filename: 'nes.png', content_type: 'image/png')
+student_seven.photo.attach(io: file_seven, filename: "#{student_seven}.png", content_type: 'image/png')
 student_seven.save
-student_eight = Student.create!(first_name: "Verónica", last_name: "Smith", date_of_birth: Date.parse("15/12/2015"), coins: 60, classroom: Classroom.last)
+student_eight = Student.new(first_name: "Verónica", last_name: "Smith", date_of_birth: Date.parse("15/12/2015"), coins: 60, classroom: Classroom.last)
 file_eight = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Jake-Sulley-icon.png')
-student_eight.photo.attach(io: file_eight, filename: 'nes.png', content_type: 'image/png')
+student_eight.photo.attach(io: file_eight, filename: "#{student_eight}.png", content_type: 'image/png')
 student_eight.save
-student_nine = Student.create!(first_name: "Guillermo", last_name: "Smith", date_of_birth: Date.parse("17/01/2015"), coins: 70, classroom: Classroom.last)
+student_nine = Student.new(first_name: "Guillermo", last_name: "Smith", date_of_birth: Date.parse("17/01/2015"), coins: 70, classroom: Classroom.last)
 file_nine = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Minion-Pig-icon.png')
-student_nine.photo.attach(io: file_nine, filename: 'nes.png', content_type: 'image/png')
+student_nine.photo.attach(io: file_nine, filename: "#{student_nine}.png", content_type: 'image/png')
 student_nine.save
-student_ten = Student.create!(first_name: "Bob", last_name: "Smith", date_of_birth: Date.parse("18/12/2015"), coins: 80, classroom: Classroom.last)
+student_ten = Student.new(first_name: "Bob", last_name: "Smith", date_of_birth: Date.parse("18/12/2015"), coins: 80, classroom: Classroom.last)
 file_ten = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/128/Zombie-icon.png')
-student_ten.photo.attach(io: file_ten, filename: 'nes.png', content_type: 'image/png')
+student_ten.photo.attach(io: file_ten, filename: "#{student_ten}.png", content_type: 'image/png')
 student_ten.save
+student_eleven = Student.new(first_name: "Jessica", last_name: "Smith", date_of_birth: Date.parse("19/04/2015"), coins: 10, classroom: Classroom.last)
+file_eleven = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Stuart-icon.png')
+student_eleven.photo.attach(io: file_eleven, filename: "#{student_eleven}.png", content_type: 'image/png')
+student_eleven.save
+student_twelve = Student.new(first_name: "Manuela", last_name: "Smith", date_of_birth: Date.parse("24/05/2015"), coins: 140, classroom: Classroom.last)
+file_twelve = URI.open('https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Slimer-icon.png')
+student_twelve.photo.attach(io: file_twelve, filename: "#{student_twelve}.png", content_type: 'image/png')
+student_twelve.save
 
 puts "creating missions"
 

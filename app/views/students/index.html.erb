@@ -1,11 +1,11 @@
 <h1>All the students</h1>
+<%= link_to "Add student", new_student_path(@student), class:"btn btn-dark" %>
 
 <div class="grid-container">
   <div class='student-cards'>
-    <% @students.each do |s| %>
-      <div class='student-card'>
-        <%= image_tag "devil-mad-icon.png" %>
-        <li><strong><%= link_to s.first_name, student_path(s), class:'link' %></strong></li>
+    <% @students.each do |student| %>
+      <div class="student-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path student.photo.key, height: 300, crop: :fill %>')">
+        <h2><strong><%= link_to student.first_name, student_path(student), class:'link' %></strong></h2>
       </div>
     <% end %>
   </div>
