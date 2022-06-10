@@ -29,6 +29,6 @@ export default class extends Controller {
   info(event) {
    this.descriptionTarget.classList.remove("d-none")
    this.formTarget.classList.add("d-none")
-   this.iTarget.classList.add("d-none")
+
   }
 }

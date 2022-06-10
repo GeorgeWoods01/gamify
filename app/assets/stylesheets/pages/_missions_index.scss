@@ -9,10 +9,14 @@
 .card-bottom-right{
   padding: 20px;
 }
+
 .mission-photo {
-object-position: bottom;
-height: 50px;
-width: 100px;
+  object-position: bottom;
+  border-radius: 67px;
+  border: 3px solid #1C419A;
+  width: 100%;
+  height: 100px;
+  object-fit: contain
 }
 
 .missions-cards{
@@ -24,16 +28,39 @@ width: 100px;
   flex-direction: column;
   justify-content: space-between;
   position:relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 67px;
   padding: 20px;
+  background: #E1F2FF;
+  border: 5px solid #1C419A;
 }
+
 .card-mission-bottom{
   display:flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 10px;
+  color: #1C419A;
+  border-radius: 67px;
+}
+i:hover{
+  color: #35B2AE;
 }
 
+.description{
+  border: 3px solid #1C419A;
+  border-radius: 67px;
+  padding: 20px;
+  white-space: normal;
+}
+
+.mission-card-title{
+  border-radius: 67px;
+  font-size: 18px !important;
+  font-family: "Fredoka One" !important;
+  color: #1C419A;
+  border: 3px solid #1C419A;
+  padding: 8px;
+}
 .card-mission-bottom-left{
   text-align: left;
   margin-top: 0px
@@ -44,11 +71,8 @@ width: 100px;
   font-weight: bold;
   justify-content: space-between;
 }
-a{
-  text-decoration: none;
-}
-
-.btn {
-  color: red;
-  border-radius: 10px;
+.create-mission-btn{
+  background-color: #1C419A;
+  border-radius: 67px;
+  color: #E1F2FF;
 }

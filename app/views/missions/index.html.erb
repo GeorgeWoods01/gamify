@@ -1,14 +1,22 @@
 <div class="container py-10">
-<h1>All the missions</h1>
+<div class="title">
+<h1>Missions</h1>
+</div>
 
-<%# <a href="new_classroom_mission_path(@classroom)" class="btn btn-info btn-sm active" role="button" aria-pressed="true">Create a mission</a> %>
-<%= link_to "Create a mission", new_classroom_mission_path(@classroom), class: "btn btn-info btn-sm active" %>
+<%= link_to "Create a mission", new_classroom_mission_path(@classroom), class: "btn create-mission-btn" %>
 
 <div class="missions-cards">
   <% @missions.each do |mission| %>
     <div class='mission-card'  data-controller="insert-in-list">
-      <%= image_tag "rocket.png", class: "mission-photo" %>
-      <strong> <%= mission.name %> </strong>
+      <div class= "mission-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path mission.photo.key, height: 300, crop: :fill %>')">
+      </div>
+      <br>
+      <div class="mission-card-title " >
+      <%= mission.name %>
+      </div>
+        <div class="description d-none" data-insert-in-list-target="description">
+                <p class ="mission_description"><%= mission.description %> </p>
+        </div>
         <div class="card-mission-bottom" data-insert-in-list-target="cardBottom" >
           <div class="card-mission-bottom-left">
            <p> <%= mission.coins %><i class="fa fa-coins"></i> </p>
@@ -22,7 +30,7 @@
                   <i data-action="click->insert-in-list#send" class="fas fa-play"></i>
                    <i data-action="click->insert-in-list#info" class="fas fa-info"></i>
                 <% end%>
-                <p class="d-none" data-insert-in-list-target="description"><%= mission.description %> </p>
+
             </div>
         </div>
      </div>
