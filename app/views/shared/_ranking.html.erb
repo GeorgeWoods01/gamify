@@ -3,7 +3,7 @@
   <% students_sorted = students.sort_by { |s| -s.coins}   %>
   <%  students_sorted.each_with_index do |student, index| %>
     <div class = "row-leaderboard mt-4">
-      <%= image_tag ("https://icons.iconarchive.com/icons/hopstarter/halloween-avatar/256/Bat-icon.png"), class: "ava-row" %>
+      <%= image_tag (cl_image_path student.photo.key), class: "ava-row" %>
       <p class = "name-text"><%=" #{index + 1}-#{student.first_name}"  %></p>
       <div>
         <p class="coin-text"><%= student.coins %></p>
