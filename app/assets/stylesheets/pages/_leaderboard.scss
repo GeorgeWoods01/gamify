@@ -9,9 +9,12 @@
   font-weight: 400;
   font-size: 96px;
   display: flex;
-  text-align: center;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
   color: #FFFFFF;
   -webkit-text-stroke: 3px #1A558A;
+}
+.leaderboard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

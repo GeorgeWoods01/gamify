@@ -1,4 +1,4 @@
-<div >
+<div class="leaderboard">
   <% students = Classroom.last.students  %>
   <% students_sorted = students.sort_by { |s| -s.coins}   %>
   <%  students_sorted.each_with_index do |student, index| %>
