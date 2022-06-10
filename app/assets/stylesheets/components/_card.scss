@@ -7,6 +7,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+}
+
+.student-card a {
+  color: #35B2AE;
+  -webkit-text-stroke: 1px white;
 }
 
 .student-cards {
@@ -20,4 +26,17 @@
 
 .link {
   text-decoration: none;
+}
+
+.btn {
+  -webkit-text-stroke: 1px white;
+  font-size: large;
+  height: 75px;
+  width: 200px;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F5692E;
+  border-radius: 200px;
 }

@@ -49,6 +49,14 @@ a{
 }
 
 .btn {
-  color: red;
-  border-radius: 10px;
+  -webkit-text-stroke: 1px white;
+  font-size: large;
+  height: 75px;
+  width: 200px;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F5692E;
+  border-radius: 200px;
 }

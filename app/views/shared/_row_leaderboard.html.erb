@@ -1,5 +1,7 @@
 <div class = "row-leaderboard">
-  <%= image_tag ("ava/ava-1.png"), class: "ava-row" %>
+  <% @students.each do |student| %>
+    <%= image_tag (cl_image_path student.photo.key), class: "ava-row" %>
+  <% end %>
   <p class = "name-text">Student Name</p>
   <div>
     <p class="coin-text">200</p>
