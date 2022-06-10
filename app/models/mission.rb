@@ -6,5 +6,4 @@ class Mission < ApplicationRecord
   validates :name, presence: true
   validates :coins, presence: true
   validates :description, length: { minimum: 10 }
-  validates :length, presence: true
 end

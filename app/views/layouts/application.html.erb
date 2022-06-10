@@ -13,8 +13,17 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
-  <body>
+    <% if current_page?(root_path) %>
+    <body style="background-image: url(<%= asset_path '1.png' %>);">
+    <% elsif current_user && current_page?(classroom_students_path(current_user.classroom))%>
+    <body style="background-image: url(<%= asset_path '2.png' %>);">
+    <% elsif current_user && current_page?(classroom_missions_path(current_user.classroom))%>
+    <body style="background-image: url(<%= asset_path '4.png' %>);">
+    <% elsif current_user && current_page?(students_path)%>
+    <body style="background-image: url(<%= asset_path '4.png' %>);">
+    <% else %>
+    <body style="background-image: url(<%= asset_path '1.png' %>);">
+    <% end %>
       <%= render 'shared/navbar', class: @classroom %>
       <div class="container-page">
       <%= render 'shared/flashes' %>

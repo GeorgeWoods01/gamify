@@ -1,4 +1,14 @@
-
-//body{
- // background-color: rgb(208, 238, 247);
-//}
+h1{
+  font-family: 'Fredoka One', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  -webkit-text-stroke: 2px #1A558A;
+}
+body{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
