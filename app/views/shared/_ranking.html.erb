@@ -6,9 +6,17 @@
       <%= image_tag (cl_image_path student.photo.key), class: "ava-row" %>
       <p class = "name-text"><%=" #{index + 1}-#{student.first_name}"  %></p>
       <div>
-        <p class="coin-text"><%= student.coins %></p>
+        <p class="coin-text" id="<%=student.id %>" data-leaderboard-target="coins"><%= student.coins %></p>
         <%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %>
       </div>
+      <div>
+          <%= link_to student_path(student, value:"add"), method: :patch, id: student.id, data: { action: "click->leaderboard#add" }, class: "add-button" do %>
+          <%= image_tag "1_coins.png", :class => "add-button d-flex"%>
+          <% end %>
+          <%= link_to student_path(student, value:"subtract"), method: :patch, id: student.id, data: { action: "click->leaderboard#subtract" }, class: "subtract-button" do %>
+          <%= image_tag "coins.png", :class => "add-button d-flex"%>
+          <% end %>
+        </div>
     </div>
   <% end %>
 </div>
