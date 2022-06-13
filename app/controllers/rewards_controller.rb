@@ -13,8 +13,9 @@ class RewardsController < ApplicationController
 
   def create
     @reward = Reward.new(reward_params)
+    @reward.user = current_user
     if @reward.save
-      redirect_to rewards_path(@reward)
+      redirect_to rewards_path(@rewards)
     else
       render :new
     end
@@ -24,12 +25,12 @@ class RewardsController < ApplicationController
     @reward = Reward.find(params[:id])
     @reward.destroy
 
-    redirect_to rewards_path(@reward)
+    redirect_to rewards_path(@rewards)
   end
 
   private
 
   def reward_params
-    params.require(:reward).permit(:title, :description, :coins, :photo)
+    params.require(:reward).permit(:title, :description, :price, :photo)
   end
 end
