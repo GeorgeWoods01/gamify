@@ -1,0 +1,27 @@
+<h1>Selecione os alunos</h1>
+<div class="btn"> Confirm </div>
+<div class="btn"> Skip </div>
+
+<%= @mission_setups.length %>
+
+
+    <%# <li> <%= "#{ Student.find(mission_setup.student_id).first_name} : completion #{mission_setup.completion}  " %>
+
+
+
+<%= form_tag update_collection_mission_setups_path, method: :patch do |form| %>
+  <% @mission_setups.each do |mission_setup| %>
+    <%= "#{ Student.find(mission_setup.student_id).first_name}" %>
+    <%= fields_for "mission_setups[]", mission_setup do |f| %>
+      <%= f.label "x" %>
+      <%= f.check_box :completion%>
+      <%= f.submit "Salvar", class: "d-none" %>
+    <% end %>
+
+  <% end %>
+<%= submit_tag "Submit" %>
+<% end %>
+
+<div data-controller="select-students">
+  <input data-select-students-target="submit" data-action="click->select-students#update" type="button" value="Confirm"/>
+</div>
