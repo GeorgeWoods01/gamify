@@ -22,6 +22,16 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+  def update
+    @student = Student.find(params[:id])
+    @coins = @student.coins
+    if params[:value] == "add"
+      @student.update(coins: @coins += 1)
+    else
+      @student.update(coins: @coins -= 1)
+    end
+  end
+
   private
 
   def student_params

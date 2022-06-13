@@ -6,9 +6,9 @@ Rails.application.routes.draw do
     resources :mission_setups, only: [:create]
   end
 
-  resources :classroom, only: [ :show ] do
+  resources :classroom, only: [:show] do
     resources :students, only: %i[index]
     resources :missions, only: %i[new create index]
   end
-  resources :students, only: %i[show new create]
+  resources :students, only: %i[show new create update]
 end
