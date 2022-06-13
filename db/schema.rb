@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_09_132552) do
+ActiveRecord::Schema.define(version: 2022_06_13_093440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,25 @@ ActiveRecord::Schema.define(version: 2022_06_09_132552) do
     t.index ["classroom_id"], name: "index_missions_on_classroom_id"
   end
 
+  create_table "reward_transactions", force: :cascade do |t|
+    t.bigint "reward_id", null: false
+    t.bigint "student_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["reward_id"], name: "index_reward_transactions_on_reward_id"
+    t.index ["student_id"], name: "index_reward_transactions_on_student_id"
+  end
+
+  create_table "rewards", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "price"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_rewards_on_user_id"
+  end
+
   create_table "students", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -103,5 +122,8 @@ ActiveRecord::Schema.define(version: 2022_06_09_132552) do
   add_foreign_key "mission_setups", "missions"
   add_foreign_key "mission_setups", "students"
   add_foreign_key "missions", "classrooms"
+  add_foreign_key "reward_transactions", "rewards"
+  add_foreign_key "reward_transactions", "students"
+  add_foreign_key "rewards", "users"
   add_foreign_key "students", "classrooms"
 end
