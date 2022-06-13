@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import { csrfToken } from "@rails/ujs"
 
 export default class extends Controller {
-  static targets = ["form", "cardBottom", "description","countdown"]
+  static targets = ["form", "cardBottom", "description","countdown", "exit"]
   static values = {time: Number}
   connect() {
     // console.log(this.element)
@@ -32,11 +32,12 @@ export default class extends Controller {
   info(event) {
    this.descriptionTarget.classList.remove("d-none")
    this.formTarget.classList.add("d-none")
+   this.exitTarget.classList.toggle("d-none")
   }
 
   simpleCountdown(target = this.countdownTarget,time){
     // Set the date we're counting down to
-  const countDownDate = new Date("Jan 5, 2024 15:37:00").getTime();
+  const countDownDate = new Date("Jan 5, 2024 15:00:00").getTime();
   //const countDownDate = new Date().getTime() + mission.length
 // Update the count down every 1 second
   const x = setInterval(function() {
