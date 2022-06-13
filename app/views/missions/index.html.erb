@@ -1,38 +1,37 @@
 <div class="container py-10">
-<div class="title">
-<h1>Missions</h1>
-</div>
+  <div class="title">
+    <h1>Missions</h1>
+  </div>
 
-<%= link_to "Create a mission", new_classroom_mission_path(@classroom), class: "btn" %>
+  <%= link_to "Create a mission", new_classroom_mission_path(@classroom), class: "btn" %>
 
-<div class="missions-cards">
-  <% @missions.each do |mission| %>
-    <div class='mission-card'  data-controller="insert-in-list">
-      <div class= "mission-photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path mission.photo.key, height: 300, crop: :fill %>')">
-      </div>
-      <br>
-      <div class="mission-card-title " >
-      <%= mission.name %>
-      </div>
-        <div class="description d-none" data-insert-in-list-target="description">
-                <p class ="mission_description"><%= mission.description %> </p>
+  <div class="missions-cards">
+    <% @missions.each do |mission| %>
+      <div class='mission-card'  data-controller="insert-in-list"                     data-insert-in-list-time-value="<%= mission.length %>" >
+        <div class= "mission-photo" style="background-image: linear-gradient(rgba (0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path mission.photo.key,   height: 300, crop: :fill %>')">
+        </div>
+        <br>
+        <div class="mission-card-title" >
+          <%= mission.name %>
+        </div>
+        <div class="description d-none"                   data-insert-in-list-target="description">
+          <p class ="mission_description"><%= mission.description %> </p>
         </div>
         <div class="card-mission-bottom" data-insert-in-list-target="cardBottom" >
           <div class="card-mission-bottom-left">
-           <p> <%= mission.coins %><i class="fa fa-coins"></i> </p>
+            <p> <%= mission.coins %><i class="fa fa-coins"></i> </p>
           </div>
-            <div class="card-bottom-right">
-              <div data-insert-in-list-target="items">
-              </div>
-                <%= simple_form_for([mission, @mission_setup], remote: true, data: { insert_in_list_target: "form"} ) do |f|%>
-                  <%= f.submit style: 'display: none', id: 'start'%>
-
-                  <i data-action="click->insert-in-list#send" class="fas fa-play"></i>
-                   <i data-action="click->insert-in-list#info" class="fas fa-info"></i>
-                <% end%>
-
-            </div>
+          <div class="card-bottom-right" >
+            <div data-insert-in-list-target="items">
+          </div>
+          <%= simple_form_for([mission, @mission_setup], remote: true,   data: { insert_in_list_target: "form"} ) do |f|%>
+            <%= f.submit style: 'display: none', id: 'start' %>
+            <i data-action="click->insert-in-list#send" data-time="<%= mission.length%>" class="fas  fa-play"></i>
+            <i data-action="click->insert-in-list#info" class="fas    fa-info"></i>
+          <% end%>
         </div>
-     </div>
-  <% end %>
+</div>
+      </div>
+    <% end %>
+  </div>
 </div>
