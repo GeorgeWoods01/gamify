@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     collection do
       match "update_collection", via: [:put, :patch]
     end
+  end
 
   resources :students, only: %i[show new create update]
   resources :rewards, only: %i[index show new create destroy] do
