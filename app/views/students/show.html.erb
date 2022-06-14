@@ -4,4 +4,20 @@
 <p>Last Name: <%= @student.last_name %></p>
 <p>Coins: <%= @student.coins %></p>
 <p>Birthday: <%= @student.date_of_birth %></p>
+<div class="achievements">
+<h1><%= image_tag "10_start.png", class: "achiev-star"%> Achievements <%= image_tag "10_start.png", class: "achiev-star"%></h1>
+</div>
+<div class="missions-cards">
+  <% @my_missions_completed.each do |m| %>
+    <div class="student-mission">
+      <div class="achiev-card">
+      <%= image_tag "gold_trophy3.png", class: "trophy"%>
+        <p><%= m.name.upcase %></p>
+      </div>
+      <div class="description d-none" data-insert-in-list-target="description">
+        <p class ="mission_description"><%= m.description %></p>
+      </div>
+      </div>
+    <% end %>
+  </div>
 </div>
