@@ -20,6 +20,13 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    @my_missions_completed = []
+    @my_missions = MissionSetup.where(student_id: @student.id)
+    @my_missions.each do |m|
+      if m.completion == true
+        @my_missions_completed << Mission.find(m.mission_id)
+      end
+    end
   end
 
   def update
