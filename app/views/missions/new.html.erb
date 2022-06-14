@@ -1,12 +1,13 @@
 <div class="container-page">
   <h1>New Mission</h1>
-
-  <%= simple_form_for [@classroom, @mission] do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :coins %>
-    <%= f.input :length %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit %>
-  <% end %>
+  <div class="container-form">
+    <%= simple_form_for [@classroom, @mission] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :coins %>
+      <%= f.input :length %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
 </div>

@@ -1,4 +1,6 @@
-<%= simple_form_for([@reward, @reward_transaction]) do |f| %>
-<%= f.association :student, value: :name %>
-<%= f.submit "Buy reward" %>
-<% end %>
+<div class="container-form">
+  <%= simple_form_for([@reward, @reward_transaction]) do |f| %>
+    <%= f.association :student, value: :name %>
+    <%= f.submit "Buy reward" %>
+  <% end %>
+</div>
