@@ -1,6 +1,6 @@
 <h1> Reward</h1>
 <div class="student-show">
-  <p>Title: <%= @reward.title %></p>
+  <p>Title: <%= link_to @reward.title, new_reward_reward_transaction_path(@reward), class: 'link' %></p>
   <p>Description: <%= @reward.description %></p>
   <p>price: <%= @reward.price %> coins</p>
 </div>

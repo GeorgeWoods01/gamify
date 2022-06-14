@@ -7,4 +7,8 @@ class Student < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :date_of_birth, presence: true
+
+  def name
+    first_name
+  end
 end

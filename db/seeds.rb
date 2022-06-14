@@ -10,6 +10,7 @@ require "date"
 require "time"
 require "open-uri"
 
+RewardTransaction.destroy_all
 MissionSetup.destroy_all
 Mission.destroy_all
 Student.destroy_all
@@ -105,15 +106,22 @@ reward_one = Reward.new(title: "No homework!", price: 150, description: "no home
 file_g = URI.open('https://assets.change.org/photos/4/ku/iw/yqkUiWQfUPRVltW-800x450-noPad.jpg?1507724394')
 reward_one.photo.attach(io: file_g, filename: "#{reward_one}.png", content_type: 'image/png')
 reward_one.save
-reward_one = Reward.new(title: "Pick a game!", price: 100, description: "Pick a game to end the day with!", user: User.last)
-file_g = URI.open('https://27mi124bz6zg1hqy6n192jkb-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/Engaging-Classroom-Games-1024x670.jpg')
-reward_one.photo.attach(io: file_g, filename: "#{reward_one}.png", content_type: 'image/png')
-reward_one.save
-reward_one = Reward.new(title: "Hint in a test!", price: 150, description: "One hint in a test when you don't know the answer!", user: User.last)
-file_g = URI.open('https://images.unsplash.com/photo-1630983358494-96012d838b84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')
-reward_one.photo.attach(io: file_g, filename: "#{reward_one}.png", content_type: 'image/png')
-reward_one.save
-reward_one = Reward.new(title: "Choose an activity!", price: 100, description: "Choose your favourite activity for us to do!", user: User.last)
-file_g = URI.open('https://cdn2.momjunction.com/wp-content/uploads/2016/01/Fun-Classroom-Games-And-Activities-For-Kids-624x702.jpg.webp')
-reward_one.photo.attach(io: file_g, filename: "#{reward_one}.png", content_type: 'image/png')
-reward_one.save
+reward_two = Reward.new(title: "Pick a game!", price: 100, description: "Pick a game to end the day with!", user: User.last)
+file_h = URI.open('https://27mi124bz6zg1hqy6n192jkb-wpengine.netdna-ssl.com/wp-content/uploads/2020/05/Engaging-Classroom-Games-1024x670.jpg')
+reward_two.photo.attach(io: file_h, filename: "#{reward_two}.png", content_type: 'image/png')
+reward_two.save
+reward_three = Reward.new(title: "Hint in a test!", price: 150, description: "One hint in a test when you don't know the answer!", user: User.last)
+file_i = URI.open('https://images.unsplash.com/photo-1630983358494-96012d838b84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')
+reward_three.photo.attach(io: file_i, filename: "#{reward_three}.png", content_type: 'image/png')
+reward_three.save
+reward_four = Reward.new(title: "Choose an activity!", price: 100, description: "Choose your favourite activity for us to do!", user: User.last)
+file_j = URI.open('https://cdn2.momjunction.com/wp-content/uploads/2016/01/Fun-Classroom-Games-And-Activities-For-Kids-624x702.jpg.webp')
+reward_four.photo.attach(io: file_j, filename: "#{reward_four}.png", content_type: 'image/png')
+reward_four.save
+
+puts "creating all reward transactions"
+
+RewardTransaction.create!(reward: reward_one, student: student_one)
+RewardTransaction.create!(reward: reward_two, student: student_two)
+RewardTransaction.create!(reward: reward_three, student: student_three)
+RewardTransaction.create!(reward: reward_four, student: student_four)
