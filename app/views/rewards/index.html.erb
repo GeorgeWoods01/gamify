@@ -6,6 +6,8 @@
       <div class="student-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path reward.photo.key, height: 300, crop: :fill %>')">
         <div class="info-card">
           <h2><strong><%= link_to reward.title, reward_path(reward), class:'link' %></strong></h2>
+        </div>
+        <div class="trash">
           <%= link_to reward_path(reward), method: :delete do %>
             <i class="fas fa-trash" ></i>
           <% end %>
