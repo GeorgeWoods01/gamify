@@ -53,7 +53,7 @@ export default class extends Controller {
   //const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)//);
   const minutes = parseInt(time) - 1
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    console.log(target)
+  //  console.log(target)
   // Display the result in the element with id="demo"
   target.innerText = minutes + "m " + seconds + "s ";
 
