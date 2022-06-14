@@ -102,7 +102,7 @@ end
 
 puts "creating rewards"
 
-reward_one = Reward.new(title: "No homework!", price: 150, description: "no homework for one whole day!", user: User.last)
+reward_one = Reward.new(title: "No homework!", price: 150, description: "No homework for one whole day!", user: User.last)
 file_g = URI.open('https://assets.change.org/photos/4/ku/iw/yqkUiWQfUPRVltW-800x450-noPad.jpg?1507724394')
 reward_one.photo.attach(io: file_g, filename: "#{reward_one}.png", content_type: 'image/png')
 reward_one.save
