@@ -1,6 +1,6 @@
 .missions-cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   width: 100%;
   flex-grow: 1;
@@ -11,40 +11,31 @@
   padding: 20px;
 }
 
-.mission-photo {
-  //object-position: bottom;
-  border-radius: 67px;
-  border: 3px solid #1C419A;
-  width: 100%;
-  height: 100px;
-  background-size: cover;
-}
-
 .mission-card{
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  position:relative;
+  position: relative;
   border-radius: 67px;
-  padding: 20px;
   background: #E1F2FF;
-  border: 5px solid #1C419A;
+  //width: 400px;
+  //height: 200px;
 }
 
 .card-mission-bottom{
-  display:flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 10px;
+  //display:flex;
+  //justify-content: space-between;
+  //align-items: flex-end;
+  padding: 20px;
   color: #1C419A;
-  border-radius: 67px;
+  border-radius: 0px 0px 67px 67px;
+  background-color: #9EE5FF;
 }
 i:hover{
   color: #35B2AE;
 }
 
 .description{
-  border: 3px solid #1C419A;
   border-radius: 67px;
   padding: 20px;
   white-space: normal;
@@ -54,23 +45,36 @@ i:hover{
   color: #1C419A;
 }
 
+p{
+  font-family: "Fredoka One" !important;
+  font-size: 16px !important;
+}
 .mission-card-title{
-  border-radius: 67px;
   font-size: 18px !important;
   font-family: "Fredoka One" !important;
   color: #1C419A;
-  border: 3px solid #1C419A;
   padding: 8px;
+  text-align: center;
+  padding: 40px;
 }
 .card-mission-bottom-left{
-  text-align: left;
-  margin-top: 0px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 .card-mission-bottom-right{
   text-align: right;
   font-weight: bold;
   justify-content: space-between;
+}
+
+.length{
+  justify-content: space-between;
+  text-align: center;
+}
+
+.length-mission{
+  height: 30px;
 }
 
 a{
@@ -89,3 +93,48 @@ a{
   background: #F5692E;
   border-radius: 200px;
 }
+.coins-mission{
+  height: 40px;
+}
+
+.exit-mission{
+  position: fixed;
+  height: 40px;
+  margin: -56px;
+}
+
+.play-mission{
+  position: absolute;
+  left: 175px;
+  top: 25px;
+}
+
+.footer_card{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+  position: relative;
+  margin-right: 45px;
+}
+
+.info-icon{
+  position: absolute;
+  font-size: 42px;
+  top: 45px;
+  right: 12px;
+  color: #2457AB;
+}
+
+.mission_exit{
+  height: 40px
+}
+
+
+.missions-container {
+ padding: 48px !important;
+}
+
+//.container-page {
+//  width: 0px !important;
+//  margin: 0px !important;
+//}
