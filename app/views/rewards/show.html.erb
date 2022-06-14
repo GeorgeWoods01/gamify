@@ -1,6 +1,8 @@
+<%= link_to "back to rewards", rewards_path, class: 'btn' %>
+
 <h1> Reward</h1>
 <div class="student-show">
-  <p>Title: <%= @reward.title %></p>
-  <p>Description: <%= @reward.description %></p>
-  <p>price: <%= @reward.price %> coins</p>
+  <p><%= link_to @reward.title, new_reward_reward_transaction_path(@reward), class: 'link' %></p>
+  <h3><%= @reward.description %></h3>
+  <h3><%= @reward.price %><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %></h3>
 </div>
