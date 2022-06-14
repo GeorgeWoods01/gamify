@@ -1,10 +1,11 @@
 <div class="container">
   <h1> Add new Student </h1>
-  <%= simple_form_for [@classroom, @student] do |f| %>
-    <%= f.input :first_name , placeholder: "What is their first name?" %>
-    <%= f.input :last_name, placeholder: "What is their last name?" %>
-    <%= f.input :date_of_birth, placeholder: "when were they born?" %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "Create", class: "btn btn-danger" %>
-  <% end %>
+  <div class="container-form">
+    <%= simple_form_for [@classroom, @student] do |f| %>
+      <%= f.input :first_name , placeholder: "What is their first name?" %>
+      <%= f.input :last_name, placeholder: "What is their last name?" %>
+      <%= f.input :date_of_birth, placeholder: "when were they born?" %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Create", class: "btn btn-danger" %>
+    <% end %>
 </div>
