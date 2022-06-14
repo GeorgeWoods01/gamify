@@ -32,3 +32,27 @@
   height: 45px;
   width: 45px;
 }
+
+.check-box{
+  // position: absolute;
+  // transform: scale(0);
+
+  // background-image: image-url("100_icons/little/4_close.png");
+
+  // &:checked{
+    // background-image: image-url("100_icons/little/8_ok.png");
+  // }
+}
+
+.check-box + label {
+  cursor: pointer;
+  color: red;
+  // height:100px;
+  // width: 100px;
+}
+
+.check-box:checked + label{
+  // background-image: image-url("100_icons/little/8_ok.png");
+  color: green;
+
+}
