@@ -1,27 +1,23 @@
 <h1>Selecione os alunos</h1>
-<div class="btn"> Confirm </div>
-<div class="btn"> Skip </div>
 
-<%= @mission_setups.length %>
-
-
-    <%# <li> <%= "#{ Student.find(mission_setup.student_id).first_name} : completion #{mission_setup.completion}  " %>
-
-
-
-<%= form_tag update_collection_mission_setups_path, method: :patch do |form| %>
-  <% @mission_setups.each do |mission_setup| %>
-    <%= "#{ Student.find(mission_setup.student_id).first_name}" %>
-    <%= fields_for "mission_setups[]", mission_setup do |f| %>
-      <%= f.label "x" %>
-      <%= f.check_box :completion%>
-      <%= f.submit "Salvar", class: "d-none" %>
+<div data-controller = "change-checkbox">
+  <%= form_tag update_collection_mission_setups_path, remote: true,  method: :patch do |form| %>
+    <%= submit_tag "Submit", class: "confirm-button" %>
+    <% @mission_setups.each do |mission_setup| %>
+      <% student = Student.find(mission_setup.student_id) %>
+      <%= fields_for "mission_setups[]", mission_setup do |f| %>
+        <div class = "row-leaderboard mt-4">
+          <%= image_tag (cl_image_path student.photo.key), class: "ava-row" %>
+          <p class = "name-text"><%="#{student.first_name}"  %></p>
+          <div>
+            <%= f.check_box :completion, class: "check-box", id: mission_setup.id %>
+            <%= f.label :completion, data: {  action: "click->change-checkbox#change", setup: mission_setup.id }, id: "check" do  %>
+              <%= image_tag ("100_icons/little/8_ok.png")%>
+            <% end %>
+          </div>
+        </div>
+        <%= f.submit "Salvar", class: "d-none" %>
+      <% end %>
     <% end %>
-
   <% end %>
-<%= submit_tag "Submit" %>
-<% end %>
-
-<div data-controller="select-students">
-  <input data-select-students-target="submit" data-action="click->select-students#update" type="button" value="Confirm"/>
 </div>
