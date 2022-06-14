@@ -30,17 +30,18 @@
 }
 
 .btn {
-  -webkit-text-stroke: 1px white;
-  font-size: large;
-  height: 75px;
-  width: 200px;
-  padding: 15px 40px;
+  color: white;
+  -webkit-text-stroke: 1px  #35B2AE;
+  font-size: xx-large;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #F5692E;
   border-radius: 200px;
   margin-top: 10px;
+  font-family: 'Fredoka One', cursive;
+  width: fit-content;
 }
 
 .fas.fa-trash::before {
