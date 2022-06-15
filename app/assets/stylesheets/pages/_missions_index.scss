@@ -7,10 +7,6 @@
   padding: 20px;
 }
 
-.card-bottom-right{
-  padding: 20px;
-}
-
 .mission-card{
   display:flex;
   flex-direction: column;
@@ -26,13 +22,17 @@
   //display:flex;
   //justify-content: space-between;
   //align-items: flex-end;
-  padding: 20px;
+  padding: 0px 20px;
   color: #1C419A;
   border-radius: 0px 0px 67px 67px;
   background-color: #9EE5FF;
 }
 i:hover{
-  color: #35B2AE;
+  color: #F5692E;
+}
+
+play-mission:hover{
+  color: #F5692E;
 }
 
 .description{
@@ -106,8 +106,7 @@ a{
 }
 
 .play-mission{
-  position: absolute;
-  top: 30px;
+  margin-top: 1px;
   height: 68px;
 }
 
@@ -117,14 +116,16 @@ a{
   justify-content: space-evenly;
   position: relative;
   margin-right: 45px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .info-icon{
-  position: absolute;
   font-size: 38px;
-  top: 45px;
-  right: 12px;
   color: #2457AB;
+  display: flex;
+	align-items: center;
+  margin: 15px;
 }
 
 .mission_exit{
@@ -134,6 +135,11 @@ a{
 
 .missions-container {
  padding: 48px !important;
+}
+
+.new_mission_setup{
+  display: grid;
+	grid-template-columns: 1fr 1fr;
 }
 
 //.container-page {
