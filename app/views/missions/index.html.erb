@@ -14,16 +14,16 @@
         </div>
         <div class="card-mission-bottom" >
           <div class="description d-none" data-insert-in-list-target="description">
-            <p class ="mission_description"><%= mission.description %></p>
+            <p class ="mission_description"><strong><%= mission.description %></strong></p>
           </div>
           <div class="footer_card" data-insert-in-list-target="cardBottom" >
             <div class="card-mission-bottom-left">
               <%= image_tag ("Tiles/coin_button_lives.png"), class: "coins-mission"%>
-              <p> X<%= mission.coins %></p>
+              <p><strong>X<%= mission.coins %></strong></p>
             </div>
             <div class="length">
               <%= image_tag ("40_big icons/progress-bar3.png"), class: "length-mission"%>
-              <p> <%= mission.length %></p>
+              <p><strong><%= mission.length %> min</strong></p>
             </div>
             <div class="card-bottom-right">
               <div data-insert-in-list-target="items">
