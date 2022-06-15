@@ -7,12 +7,15 @@ class StudentsController < ApplicationController
 
   def new
     @student = Student.new
+    @classroom = Classroom.find(params[:classroom_id])
   end
 
   def create
     @student = Student.new(student_params)
+    @classroom = Classroom.find(params[:classroom_id])
+    @student.classroom = @classroom
     if @student.save
-      redirect_to classroom_path
+      redirect_to classroom_students_path(@classroom)
     else
       render :new
     end

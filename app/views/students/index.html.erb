@@ -1,7 +1,7 @@
 <h1> Students</h1>
 <div class="grid-container">
   <div class='student-cards'>
-  <%= link_to new_student_path(@student) do %>
+  <%= link_to new_classroom_student_path(Classroom.last) do %>
   <div class="student-card" style="background-image: url(<%= image_path 'background4.png' %>)">
     <i class="fa fa-plus" id="plus-sign"></i>
   </div>
