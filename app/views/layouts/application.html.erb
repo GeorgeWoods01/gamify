@@ -21,6 +21,8 @@
     <body style="background-image: url(<%= asset_path '4.png' %>);">
     <% elsif current_user && current_page?(students_path)%>
     <body style="background-image: url(<%= asset_path '4.png' %>);">
+    <% elsif current_user && current_page?(mission_mission_setups_path)%>
+    <body style="background-image: url(<%= asset_path '33.png' %>);">
     <% else %>
     <body style="background-image: url(<%= asset_path '1.png' %>);">
     <% end %>
