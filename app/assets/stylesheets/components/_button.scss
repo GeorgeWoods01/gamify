@@ -1,16 +1,22 @@
-.confirm-button{
-  font-family: 'Fredoka One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 44px;
-  display: flex;
-  align-items: center;
-  text-align: center;
 
-  color: #FFFFFF;
+  .confirm-button{
+    height: 70px;
+    width: 200px;
+    border: solid #00882A 2px;
+    border-top: 10px;
+    border-radius: 50px;
+    background: linear-gradient(#00FF09, #00C300);
+    color: white;
+    font-family: 'Fredoka One';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 44px;
+     -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #00427C;
+  }
 
-}
+
 
 .position-text {
   position: absolute;

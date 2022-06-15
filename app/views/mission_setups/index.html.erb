@@ -4,9 +4,9 @@
   <div data-controller = "change-checkbox" >
 
     <%= form_tag update_collection_mission_setups_path, remote: true,  method: :patch do |form| %>
-      <p class = "confirm-button position-text"> Confirm</p>
-      <%= image_submit_tag("buttons/35_bttn/bttn-big28.png", class: "image-button") %>
-      <%#= submit_tag "Submit"  %>
+      <%# <p class = "confirm-button position-text"> Confirm</p> %>
+      <%#= image_submit_tag("buttons/35_bttn/bttn-big28.png", class: "image-button") %>
+      <%= submit_tag "Confirm", class: "confirm-button" %>
       <% @mission_setups.each do |mission_setup| %>
         <% student = Student.find(mission_setup.student_id) %>
         <%= fields_for "mission_setups[]", mission_setup do |f| %>
