@@ -20,6 +20,6 @@ Rails.application.routes.draw do
 
   resources :students, only: %i[show update]
   resources :rewards, only: %i[index show new create destroy] do
-    resources :reward_transactions, only: %i[new create show index]
+    resources :reward_transactions, only: %i[create show index]
   end
 end

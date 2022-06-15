@@ -20,8 +20,8 @@ class RewardTransactionsController < ApplicationController
       redirect_to root_path
     else
       @reward_transaction = RewardTransaction.new
-      render "new"
       flash[:alert] = 'You cant buy this!'
+      render "rewards/show"
     end
   end
 end
