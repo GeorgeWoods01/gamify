@@ -2,9 +2,9 @@
   <h1> Add new Reward </h1>
   <div class="container-form">
     <%= simple_form_for [@reward] do |f| %>
-      <%= f.input :title, placeholder: "What is the reward?" %>
-      <%= f.input :description, placeholder: "What does it consist of?" %>
-      <%= f.input :price, placeholder: "what does it cost?" %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :price %>
       <%= f.input :photo, as: :file %>
       <%= f.submit "Create", class: "btn" %>
     <% end %>
