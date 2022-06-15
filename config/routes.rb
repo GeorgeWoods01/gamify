@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resources :mission_setups, only: %i[create index update]
   end
 
-  resources :classroom, only: [:show] do
-    resources :students, only: %i[index]
+  resources :classrooms, only: [:show] do
+    resources :students, only: %i[index new create]
     resources :missions, only: %i[new create index]
   end
 
@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :students, only: %i[show new create update]
+  resources :students, only: %i[show update]
   resources :rewards, only: %i[index show new create destroy] do
     resources :reward_transactions, only: %i[new create show index]
   end
