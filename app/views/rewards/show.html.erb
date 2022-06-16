@@ -13,6 +13,6 @@
   </div>
   <%= simple_form_for([@reward, @reward_transaction]) do |f| %>
     <%= f.association :student, value: :name %>
-    <%= f.submit "Buy reward" %>
+    <%= f.submit "Claim Reward!", class: "claim-reward" %>
   <% end %>
 </div>
