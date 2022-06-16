@@ -1,0 +1,5 @@
+meta_product_name: "Gamify"
+meta_title: "Gamify - Engage your students"
+meta_description: "The perfect tool to engage your students and save time to gamify your classroom"
+meta_image: "gamify.png" # should exist in `app/assets/images/`
+twitter_account: "@gamify"   # required for Twitter Cards
