@@ -31,10 +31,6 @@ i:hover{
   color: #F5692E;
 }
 
-play-mission:hover{
-  color: #F5692E;
-}
-
 .description{
   border-radius: 67px;
   padding: 20px;
@@ -44,10 +40,6 @@ play-mission:hover{
 .mission_description{
   color: #1C419A;
 }
-
-
- // font-family: "Fredoka One" !important;
- // font-size: 16px !important;
 
 .mission-card-title{
   font-size: 18px !important;
@@ -135,6 +127,7 @@ play-mission:hover{
 
 .missions-container {
  padding: 48px !important;
+ margin-left: -68px;
 }
 
 .new_mission_setup{
