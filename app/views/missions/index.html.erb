@@ -1,44 +1,45 @@
-
+<div class="container">
   <div class="title">
     <h1>Missions</h1>
   </div>
 
   <%= link_to "Create a mission", new_classroom_mission_path(@classroom), class: "btn" %>
-<div class="missions-container">
-  <div class="missions-cards">
+  <div class="missions-container">
+    <div class="missions-cards">
 
-    <% @missions.each do |mission| %>
-      <div class='mission-card' data-controller="insert-in-list" data-insert-in-list-time-value="<%= mission.length %>">
-        <div class="mission-card-title">
-          <%= mission.name %>
-        </div>
-        <div class="card-mission-bottom" >
-          <div class="description d-none" data-insert-in-list-target="description">
+      <% @missions.each do |mission| %>
+        <div class='mission-card' data-controller="insert-in-list" data-insert-in-list-time-value="<%= mission.length %>">
+          <div class="mission-card-title">
+            <%= mission.name %>
+          </div>
+          <div class="card-mission-bottom" >
+            <div class="description d-none" data-insert-in-list-target="description">
             <p class ="mission_description"><strong><%= mission.description %></strong></p>
           </div>
-          <div class="footer_card" data-insert-in-list-target="cardBottom" >
-            <div class="card-mission-bottom-left">
-              <%= image_tag ("Tiles/coin_button_lives.png"), class: "coins-mission"%>
-              <p><strong>X<%= mission.coins %></strong></p>
-            </div>
-            <div class="length">
-              <%= image_tag ("40_big icons/progress-bar3.png"), class: "length-mission"%>
-              <p><strong><%= mission.length %> min</strong></p>
-            </div>
-            <div class="card-bottom-right">
-              <div data-insert-in-list-target="items">
+            <div class="footer_card" data-insert-in-list-target="cardBottom" >
+              <div class="card-mission-bottom-left">
+                <%= image_tag ("Tiles/coin_button_lives.png"), class: "coins-mission"%>
+                <p><strong>X<%= mission.coins %></strong></p>
               </div>
-              <%= simple_form_for([mission, @mission_setup], remote: true,   data: { insert_in_list_target: "form"} ) do |f|%>
-                <%= f.submit style: 'display: none', id: 'start' %>
-                  <i data-action="click->insert-in-list#send" data-time="<%= mission.length%>"> <%=image_tag ("100_icons/little/4_arrow.png"), class: "play-mission" %> </i>
-                  <i data-action="click->insert-in-list#info" class="fas fa-info-circle info-icon"></i>
-                <% end%>
-              <p data-insert-in-list-target="exit" class="d-none"><%= link_to image_tag("100_icons/little/5_close.png"), "missions" %></p>
+              <div class="length">
+                <%= image_tag ("40_big icons/progress-bar3.png"), class: "length-mission"%>
+                <p><strong><%= mission.length %> min</strong></p>
+              </div>
+              <div class="card-bottom-right">
+                <div data-insert-in-list-target="items">
+                </div>
+                <%= simple_form_for([mission, @mission_setup], remote: true, data: { insert_in_list_target: "form"} ) do |f|%>
+                  <%= f.submit style: 'display: none', id: 'start' %>
+                    <i data-action="click->insert-in-list#send" data-time="<%= mission.length%>"> <%=image_tag ("100_icons/little/4_arrow.png"), class: "play-mission" %> </i>
+                    <i data-action="click->insert-in-list#info" class="fas  fa-info-circle info-icon"></i>
+                  <% end%>
+                <p data-insert-in-list-target="exit" class="d-none"><%= link_to image_tag("100_icons/little/5_close.png"), "missions" %></p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 </div>

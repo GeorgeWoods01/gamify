@@ -14,7 +14,8 @@ export default class extends Controller {
 
   send(event) {
     event.preventDefault()
-    const time = event.currentTarget.dataset.time
+    this.time = event.currentTarget.dataset.time
+    //console.log(this.time)
     fetch(this.formTarget.action, {
       method: "POST",
       headers: { "Accept": "application/json", "X-CSRF-Token": csrfToken() },
@@ -25,7 +26,7 @@ export default class extends Controller {
 
         this.cardBottomTarget.innerHTML = data.form;
  //       this.formTarget.insertAdjacentHTML('afterbegin', data.mission)
-        this.simpleCountdown(this.countdownTarget, time)
+        this.simpleCountdown(this.countdownTarget)
       })
   }
 
@@ -35,11 +36,13 @@ export default class extends Controller {
    this.exitTarget.classList.toggle("d-none")
   }
 
-  simpleCountdown(target = this.countdownTarget,time){
+  simpleCountdown(target = this.countdownTarget){
+
     // Set the date we're counting down to
   const countDownDate = new Date("Jan 5, 2024 15:00:00").getTime();
   //const countDownDate = new Date().getTime() + mission.length
 // Update the count down every 1 second
+  let minutes = parseInt(this.time) - 1
   const x = setInterval(function() {
 
   // Get today's date and time
@@ -51,8 +54,14 @@ export default class extends Controller {
   // Time calculations for days, hours, minutes and seconds
   //const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   //const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)//);
-  const minutes = parseInt(time) - 1
+
+  console.log(minutes, this.time)
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  if (seconds === 0) {
+    minutes = minutes - 1
+    }
+
+
   //  console.log(target)
   // Display the result in the element with id="demo"
   target.innerText = minutes + "m " + seconds + "s ";
