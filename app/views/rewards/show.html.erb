@@ -2,7 +2,13 @@
 
 <h1> Reward</h1>
 <div class="student-show">
-  <p><%= link_to @reward.title, new_reward_reward_transaction_path(@reward), class: 'link' %></p>
+  <p><%= @reward.title %></p>
   <h3><%= @reward.description %></h3>
   <h3><%= @reward.price %><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %></h3>
+</div>
+<div class="container-form">
+  <%= simple_form_for([@reward, @reward_transaction]) do |f| %>
+    <%= f.association :student, value: :name %>
+    <%= f.submit "Buy reward" %>
+  <% end %>
 </div>

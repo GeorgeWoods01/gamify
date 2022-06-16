@@ -5,6 +5,7 @@ class RewardsController < ApplicationController
 
   def show
     @reward = Reward.find(params[:id])
+    @reward_transaction = RewardTransaction.new
   end
 
   def new
