@@ -67,6 +67,7 @@ i:hover{
 
 .length-mission{
   height: 30px;
+  margin-bottom: 5px;
 }
 
 // .a {}
@@ -89,6 +90,7 @@ i:hover{
 }
 .coins-mission{
   height: 40px;
+  margin-bottom: 5px;
 }
 
 .exit-mission{
@@ -110,6 +112,7 @@ i:hover{
   margin-right: 45px;
   justify-content: space-between;
   width: 100%;
+
 }
 
 .info-icon{
@@ -135,7 +138,13 @@ i:hover{
 	grid-template-columns: 1fr 1fr;
 }
 
-//.container-page {
-//  width: 0px !important;
-//  margin: 0px !important;
-//}
+.p-coins{
+  margin-top: -3px;
+  font-family: "Fredoka One" !important;
+  color: #1C419A;
+}
+.p-length{
+  margin-top: 1px;
+  font-family: "Fredoka One" !important;
+  color: #1C419A;
+}
