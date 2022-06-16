@@ -4,7 +4,7 @@
   <%  students_sorted.each_with_index do |student, index| %>
     <div class = "row-leaderboard mt-4">
       <%= image_tag (cl_image_path student.photo.key), class: "ava-row" %>
-      <p class = "name-text"><%=" #{index + 1}-#{student.first_name}"  %></p>
+      <p class = "name-text"><%=" #{index + 1}"%> &nbsp; &nbsp; <%= "#{student.first_name}" %></p>
       <div>
         <p class="coin-text" id="<%=student.id %>" data-leaderboard-target="coins"><%= student.coins %></p>
         <%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %>
