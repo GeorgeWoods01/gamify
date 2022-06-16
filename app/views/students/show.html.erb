@@ -2,7 +2,7 @@
 <div class="student-show">
 <p><%= @student.first_name %><%= " " %><%= @student.last_name %></p>
 <p><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %><%= @student.coins %></p>
-<p><%= image_tag ("birthday_cake.png"), class: "cake-row" %><%= @student.date_of_birth %></p>
+<p><%= image_tag ("birthday_cake.png"), class: "cake-row" %><%= @student.date_of_birth.strftime('%d %b %Y') %></p>
 <div class="achievements">
 <h1><%= image_tag "10_start.png", class: "achiev-star"%> Achievements <%= image_tag "10_start.png", class: "achiev-star"%></h1>
 </div>
