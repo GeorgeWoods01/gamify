@@ -83,11 +83,11 @@ mission_one = Mission.new(name: "Work with your partner", coins: 30, description
 file_a = URI.open('https://images.unsplash.com/photo-1554721299-e0b8aa7666ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')
 mission_one.photo.attach(io: file_a, filename: "#{mission_one}.png", content_type: 'image/png')
 mission_one.save
-mission_two = Mission.new(name: "Finish the maths exercises", coins: 10, description: "finish up to question number 10", length: 60, classroom: Classroom.last)
+mission_two = Mission.new(name: "Finish the maths exercises", coins: 10, description: "Finish up to question number 10.", length: 60, classroom: Classroom.last)
 file_b = URI.open('https://images.unsplash.com/photo-1518133910546-b6c2fb7d79e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80')
 mission_two.photo.attach(io: file_b, filename: "#{mission_two}.png", content_type: 'image/png')
 mission_two.save
-mission_three = Mission.new(name: "Always put your hand up", coins: 50, description: "Don't shout out, if you have a question, put your hand up!!!", length: 180, classroom: Classroom.last)
+mission_three = Mission.new(name: "Always put your hand up", coins: 50, description: "Don't shout out, if you have a question, put your hand up!!!", length: 45, classroom: Classroom.last)
 file_c = URI.open('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')
 mission_three.photo.attach(io: file_c, filename: "#{mission_three}.png", content_type: 'image/png')
 mission_three.save
