@@ -1,12 +1,12 @@
 <h1> Student</h1>
 <div class="student-show" style="width: 650px;margin: auto;">
 <p><%= @student.first_name %><%= " " %><%= @student.last_name %></p>
-<p><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %><%= @student.coins %></p>
-<p><%= image_tag ("birthday_cake.png"), class: "cake-row" %><%= @student.date_of_birth.strftime('%d %b %Y') %></p>
+<p id="student-coins"><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %><%= @student.coins%></p>
+<p id="student-birth"><%= image_tag ("birthday_cake.png"), class: "cake-row" %><%= @student.date_of_birth.strftime('%d %b %Y') %></p>
 <div class="achievements">
-<h1><%= image_tag "10_start.png", class: "achiev-star"%> Achievements <%= image_tag "10_start.png", class: "achiev-star"%></h1>
+<h1 style="font-size: 40px;"><%= image_tag "10_start.png", class: "achiev-star"%> Achievements <%= image_tag "10_start.png", class: "achiev-star"%></h1>
   <% if @my_missions_completed.empty? %>
-    <h2 style="padding: 10px;"> Sorry no achievements ... yet 🤓 </h2>
+    <h2 style="style=padding: 10px;font-size: 20px;"> Sorry no achievements ... yet 🤓 </h2>
 </div>
   <% else %>
   <div class="missions-cards">
