@@ -3,7 +3,7 @@
 
   <div data-controller = "change-checkbox" >
 
-    <%= form_tag update_collection_mission_setups_path, remote: true,  method: :patch do |form| %>
+    <%= form_tag update_collection_mission_setups_path, remote: true, class: "mb-4", method: :patch do |form| %>
       <%# <p class = "confirm-button position-text"> Confirm</p> %>
       <%#= image_submit_tag("buttons/35_bttn/bttn-big28.png", class: "image-button") %>
       <%= submit_tag "Confirm", class: "confirm-button" %>
