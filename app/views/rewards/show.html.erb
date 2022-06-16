@@ -1,12 +1,16 @@
-<%= link_to "back to rewards", rewards_path, class: 'btn' %>
-
-<h1> Reward</h1>
-<div class="student-show">
-  <p><%= @reward.title %></p>
-  <h3><%= @reward.description %></h3>
-  <h3><%= @reward.price %><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %></h3>
+<div id="back">
+  <%= link_to rewards_path do %>
+    <%= image_tag("100_icons/6_back.png") %>
+  <% end %>
 </div>
+
 <div class="container-form">
+  <h1> Reward</h1>
+  <div class="student-show">
+    <p><%= @reward.title %></p>
+    <h3><%= @reward.description %></h3>
+    <h3><%= @reward.price %><%= " " %><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %></h3>
+  </div>
   <%= simple_form_for([@reward, @reward_transaction]) do |f| %>
     <%= f.association :student, value: :name %>
     <%= f.submit "Buy reward" %>
