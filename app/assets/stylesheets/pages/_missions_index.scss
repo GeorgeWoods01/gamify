@@ -77,16 +77,19 @@ i:hover{
 .btn {
   color: white;
   -webkit-text-stroke: 1px  #35B2AE;
-  font-size: xx-large;
-  padding: 10px 20px;
+  // font-size: xx-large;
+  font-size: 65px;
+  padding: 5px 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #F5692E;
-  border-radius: 200px;
+  border-radius: 30px;
   margin-top: 10px;
   font-family: 'Fredoka One', cursive;
-  width: fit-content;
+  width: 80px;
+  height: 90px;
+  // width: fit-content;
 }
 .coins-mission{
   height: 40px;
