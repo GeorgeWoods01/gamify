@@ -1,8 +1,6 @@
 <h1><%= @student.first_name %><%= " " %><%= @student.last_name %></h1>
 <div class="student-show" style="width: 650px;margin: auto;">
 <div class="d-flex" style="justify-content: center;margin-top: 15px">
-<div class="student-show mb-5" style="width: 650px;margin: auto;">
-<%#= @student.first_name<%= " " %><%#= @student.last_name %>
 <p id="student-coins"><%= image_tag ("Tiles/coin_shop_3.png"), class: "coins-row" %><%= @student.coins%></p>
 <p id="student-birth"><%= image_tag ("birthday_cake.png"), class: "cake-row" %><%= @student.date_of_birth.strftime('%d %b %Y') %></p>
 </div>
