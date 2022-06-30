@@ -28,3 +28,31 @@
 .image-button {
   width: 200px;
 }
+
+.btn {
+  color: white;
+  -webkit-text-stroke: 1px  #35B2AE;
+  font-size: xx-large;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F5692E;
+  border-radius: 200px;
+  margin-top: 10px;
+  font-family: 'Fredoka One', cursive;
+  width: fit-content;
+}
+
+.claim-reward {
+  border-radius: 50px;
+  font-family: 'Fredoka One', cursive;
+  font-size: x-large;
+  background-color: #F5692E;
+  color: white;
+  -webkit-text-stroke: 1px  #35B2AE;
+  border: 0px;
+  height: 70px;
+  padding: 10px
+}
+//
